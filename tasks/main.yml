@@ -1,2 +1,6 @@
 ---
+
 # tasks file for ansible-role-az
+- name: Install Azure CLI on Ubuntu
+  include_tasks: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
